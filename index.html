@@ -1,13 +1,61 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="styles.css" rel="stylesheet" />
+        <title>Lev Villanueva | Resume</title>
+        <script src="index.js" defer></script>
+    </head>
+    <body>
+        <div id="app">
+            <!-- Language Switcher -->
+            <div id="lang-switcher" class="glass-panel">
+                <button class="lang-btn active" data-lang="en" title="English"><img src="assets\flags\gb.svg" alt="English" /></button>
+                <button class="lang-btn" data-lang="es" title="Español"><img src="assets\flags\es.svg" alt="Español" /></button>
+                <button class="lang-btn" data-lang="uk" title="Українська"><img src="assets\flags\ua.svg" alt="Українська" /></button>
+                <!-- Credits for flags https://flagicons.lipis.dev/ -->
+            </div>
 
-<head>
-    <meta charset="UTF-8" />
-    <title>Résumé</title>
-</head>
+            <!-- Center Profile -->
+            <main class="glass-panel" id="center-profile">
+                <!-- Simulated assets/pictures folder path -->
+                <img src="assets\pic.png" alt="Profile" class="profile-pic" id="profile-image" />
+                <h1 class="profile-name">Lev Villanueva</h1>
+                <h2 class="profile-title" id="profile-title">Labor Astronaut</h2>
+                <p class="profile-subtitle" id="profile-subtitle">Tinkerer and life-long learner</p>
 
-<body>
-    ― Hello World! &#x1F609;
-</body>
+                <div class="center-tabs">
+                    <button class="tab-btn active" data-target="skills" id="tab-skills">Skills</button>
+                    <button class="tab-btn" data-target="experience" id="tab-experience">Experience</button>
+                    <button class="tab-btn" data-target="education" id="tab-education">Education</button>
+                </div>
 
+                <div class="center-content" id="center-content-area">
+                    <!-- Dynamically populated -->
+                </div>
+            </main>
+
+            <!-- Orbital Cards Container -->
+            <div id="orbit-container">
+                <!-- Cards dynamically populated via JS -->
+            </div>
+        </div>
+
+        <!-- Modal System -->
+        <div id="modal-overlay">
+            <div class="glass-panel" id="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="modal-title">Title</h2>
+                    <button class="close-btn" id="close-modal">&times;</button>
+                </div>
+                <div class="modal-tabs" id="modal-tabs-container">
+                    <!-- Tabs injected here -->
+                </div>
+                <div class="modal-body" id="modal-body-content">
+                    <!-- Content injected here -->
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
